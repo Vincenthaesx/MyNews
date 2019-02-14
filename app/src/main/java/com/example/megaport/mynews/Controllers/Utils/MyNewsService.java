@@ -26,7 +26,7 @@ interface MyNewsService
 
     // MOST POPULAR API
 
-    @GET("svc/mostpopular/v2/mostviewed/all-sections/7.json?api-key=pvatnTXul5i0bamh9uisdP0q9HnG0lbQ")
+    @GET("svc/mostpopular/v2/viewed/7.json?api-key=pvatnTXul5i0bamh9uisdP0q9HnG0lbQ")
     Observable<Articles> getMostPopular();
 
 
@@ -42,9 +42,11 @@ interface MyNewsService
     // RESULT API
 
     @GET("svc/search/v2/articlesearch.json?api-key=514f85e678024ec3a52dd5cb986fdc63&sort=newest" )
-    Observable<MyNewsResultAPI> getResultForNotification(@Query("q") String toSearch, @Nullable @Query("fq") List<String> filterQuery, @Nullable @Query("begin_date") String beginDate, @Nullable @Query("end_date") String endDate);
-
-
+    Observable<MyNewsResultAPI> getResultForNotification(
+            @Query("q") String toSearch,
+            @Nullable @Query("fq") List<String> filterQuery,
+            @Nullable @Query("begin_date") String beginDate,
+            @Nullable @Query("end_date") String endDate);
 
     // ----------------------------------------------
 

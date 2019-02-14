@@ -36,10 +36,6 @@ public class NotificationsActivity extends AppCompatActivity {
     private static final String PREF_KEY_QUERY_TERM = "PREF_KEY_QUERY_TERM";
     private static final String PREF_KEY_CATEGORY_LIST = "PREF_KEY_CATEGORY_LIST";
 
-    public static final String NOTIFICATIONS_HOUR = "14";
-    public static final String NOTIFICATIONS_MIN = "30";
-
-
     private SharedPreferences mPreferences;
 
     @Override
@@ -161,7 +157,7 @@ public class NotificationsActivity extends AppCompatActivity {
 
     private void toggleNotifications(boolean enableNotifications){
         if (enableNotifications){
-            NotificationHelper.scheduleRepeatingRTCNotification(getBaseContext(), NOTIFICATIONS_HOUR, NOTIFICATIONS_MIN);
+            NotificationHelper.scheduleRepeatingRTCNotification(this);
         }else{
             NotificationHelper.cancelAlarmRTC();
         }

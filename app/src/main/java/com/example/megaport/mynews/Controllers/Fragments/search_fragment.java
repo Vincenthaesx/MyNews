@@ -35,10 +35,8 @@ import io.reactivex.observers.DisposableObserver;
 public class search_fragment extends Fragment implements searchAdapter.Listener {
 
     // FOR DESIGN
-    @BindView(R.id.fragment_search_recycler_view)
-    RecyclerView recyclerViewSearch;
-    @BindView(R.id.fragment_search_swipe_container)
-    SwipeRefreshLayout swipeRefreshLayoutSearch;
+    @BindView(R.id.fragment_search_recycler_view) RecyclerView recyclerViewSearch;
+    @BindView(R.id.fragment_search_swipe_container) SwipeRefreshLayout swipeRefreshLayoutSearch;
 
     //FOR DATA
     private Disposable disposableSearch;

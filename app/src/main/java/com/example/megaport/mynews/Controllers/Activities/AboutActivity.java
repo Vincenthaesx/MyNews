@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageButton;
+import android.widget.Toolbar;
+
 import com.example.megaport.mynews.R;
 
 public class AboutActivity extends AppCompatActivity {

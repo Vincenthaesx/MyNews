@@ -8,6 +8,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v4.app.NotificationCompat;
+import android.util.Log;
+
 import com.example.megaport.mynews.Controllers.Activities.SearchResultActivity;
 import com.example.megaport.mynews.Controllers.Utils.MyNewsStreams;
 import com.example.megaport.mynews.Models.notifications.MyNewsResultAPI;
@@ -68,6 +70,7 @@ public class AlarmReceiver extends BroadcastReceiver {
 
             @Override
             public void onError(Throwable e) {
+                Log.e("TAG", "Error request");
             }
 
             @Override

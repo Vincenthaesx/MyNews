@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -123,7 +124,9 @@ public class MainFragment extends Fragment implements FragmentAdapter.Listener {
                     }
 
                     @Override
-                    public void onError(Throwable e) { }
+                    public void onError(Throwable e) {
+                        Log.e("TAG", "error request");
+                    }
 
                     @Override
                     public void onComplete() { mProgressDialog.dismiss(); }
@@ -137,7 +140,9 @@ public class MainFragment extends Fragment implements FragmentAdapter.Listener {
                     }
 
                     @Override
-                    public void onError(Throwable e) { }
+                    public void onError(Throwable e) {
+                        Log.e("TAG", "error request");
+                    }
 
                     @Override
                     public void onComplete() { mProgressDialog.dismiss(); }
@@ -151,7 +156,9 @@ public class MainFragment extends Fragment implements FragmentAdapter.Listener {
                     }
 
                     @Override
-                    public void onError(Throwable e) { }
+                    public void onError(Throwable e) {
+                        Log.e("TAG", "error request");
+                    }
 
                     @Override
                     public void onComplete() { mProgressDialog.dismiss(); }

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    tools:context=".Controllers.Activities.HelpActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_button_help"
+            android:src="@drawable/baseline_key"
+            android:layout_margin="20dp"
+            android:background="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/fragment_page_about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:text="Help"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="#000000"
+        android:text="How can we help you ?"
+        android:textSize="20dp"/>
+
+
+    <android.support.design.widget.TextInputEditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Describe your problem"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textColorLink="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Most frequent question"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How to use MyNews ?"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How to update MyNews ?"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:text="Could not read the article ?"
+            android:textColor="#000000"
+            android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="customer service"
+        android:textColor="#000000"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="haisvincentapb@hotmail.com"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="15dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="06 19 41 01 92"
+        android:layout_marginLeft="10dp"
+        android:textSize="15dp"/>
+
+
+
+    </LinearLayout>

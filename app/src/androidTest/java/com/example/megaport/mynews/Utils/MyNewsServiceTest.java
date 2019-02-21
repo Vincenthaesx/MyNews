@@ -1,10 +1,9 @@
 package com.example.megaport.mynews.Utils;
 
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import com.example.megaport.mynews.Models.Articles;
 import com.example.megaport.mynews.Models.Result;
-import com.example.megaport.mynews.Models.notifications.MyNewsResultAPI;
-import java.util.List;
+
 import io.reactivex.Observable;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;

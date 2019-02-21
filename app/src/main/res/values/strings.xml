@@ -60,5 +60,27 @@
     <string name="icon_for_search_request">icon_for_search_request</string>
     <string name="icon_navigation_drawer">icon_navigation_drawer</string>
     <string name="thumbnail">Thumbnail</string>
+    <string name="search_articles">Search articles</string>
+    <string name="specifyAtLeastOneCategory">Please specify at least one category to search</string>
+    <string name="enterAtLeastOneTerm">Please enter at least one term in the search bar</string>
+    <string name="how_can_we_help_you">How can we help you ?</string>
+    <string name="help">Help</string>
+    <string name="describe_your_problem">Describe your problem</string>
+    <string name="most_frequent_question">Most frequent question</string>
+    <string name="how_to_use_mynews">How to use MyNews ?</string>
+    <string name="how_to_update_mynews">How to update MyNews ?</string>
+    <string name="could_not_read_the_article">Could not read the article ?</string>
+    <string name="contact">Contact</string>
+    <string name="customer_service">customer service</string>
+    <string name="haisvincentapb_hotmail_com">haisvincentapb@hotmail.com</string>
+    <string name="_06_19_41_01_92">06 19 41 01 92</string>
+    <string name="about">About</string>
+    <string name="mynews">MyNews</string>
+    <string name="for_android">for Android</string>
+    <string name="version">Version</string>
+    <string name="_1_0_0">1.0.0</string>
+    <string name="created_by_vincent_hais">Created by Vincent Hais</string>
+    <string name="mynews_for_android">MyNews for Android</string>
+    <string name="is_built_from_open_source_software_androidstudio">is built from open source software: AndroidStudio</string>
 
 </resources>

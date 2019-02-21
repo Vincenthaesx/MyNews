@@ -6,7 +6,6 @@
     android:orientation="vertical"
     tools:context=".Controllers.Activities.SearchResultActivity">
 
-
     <FrameLayout
         android:id="@+id/activity_search_frame_layout"
         android:layout_width="match_parent"

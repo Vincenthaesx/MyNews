@@ -26,23 +26,23 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Search articles"
-            android:textSize="30dp"
+            android:text="@string/search_articles"
+            android:textSize="30sp"
             android:layout_marginTop="8dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:textColor="#FFFFFF" />
 
 
 
     </LinearLayout>
 
-    <android.support.design.widget.TextInputEditText
+    <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/query_include"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="@string/Search_query_term"
         android:layout_marginTop="20dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         android:textColorLink="@color/colorPrimary" />
 
 
@@ -53,7 +53,7 @@
         android:baselineAligned="false"
         android:orientation="horizontal">
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/search_begin_date_input_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -69,9 +69,9 @@
                 android:inputType="date"
                 android:textColorLink="@color/colorPrimary" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/search_end_date_input_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
                 android:inputType="date"
                 android:textColorLink="@color/colorPrimary" />
 
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
     </LinearLayout>
 

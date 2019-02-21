@@ -1,6 +1,6 @@
 package com.example.megaport.mynews;
 
-import android.support.test.runner.AndroidJUnit4;
+import androidx.test.runner.AndroidJUnit4;
 
 import com.example.megaport.mynews.Models.Articles;
 import com.example.megaport.mynews.Models.Result;

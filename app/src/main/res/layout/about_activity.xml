@@ -6,7 +6,7 @@
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#FFFFFF"
-    tools:context=".Controllers.Activities.AboutActivity">
+    tools:context=".controllers.activities.AboutActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"

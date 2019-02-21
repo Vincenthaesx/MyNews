@@ -1,7 +1,7 @@
 package com.example.megaport.mynews.Utils;
 
-import com.example.megaport.mynews.Models.Articles;
-import com.example.megaport.mynews.Models.Result;
+import com.example.megaport.mynews.models.Articles;
+import com.example.megaport.mynews.models.Result;
 
 import java.util.concurrent.TimeUnit;
 

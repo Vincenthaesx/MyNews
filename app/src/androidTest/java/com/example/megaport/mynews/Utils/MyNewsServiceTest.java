@@ -1,8 +1,7 @@
 package com.example.megaport.mynews.Utils;
 
-import androidx.annotation.Nullable;
-import com.example.megaport.mynews.Models.Articles;
-import com.example.megaport.mynews.Models.Result;
+import com.example.megaport.mynews.models.Articles;
+import com.example.megaport.mynews.models.Result;
 
 import io.reactivex.Observable;
 import retrofit2.Retrofit;

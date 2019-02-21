@@ -29,7 +29,6 @@ class MainFragment : androidx.fragment.app.Fragment() {
 
     private var position: Int? = null
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -112,7 +111,6 @@ class MainFragment : androidx.fragment.app.Fragment() {
                         mProgressDialog.dismiss()
                     }).addTo(disposable)
 
-
             1 -> MyNewsStreams.streamFetchMostPopular()
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
@@ -124,8 +122,8 @@ class MainFragment : androidx.fragment.app.Fragment() {
                     }, {
                         mProgressDialog.dismiss()
                     }).addTo(disposable)
-            2 ->
-                MyNewsStreams.streamFetchTopStories("politics")
+
+            2 -> MyNewsStreams.streamFetchTopStories("politics")
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe({
@@ -136,7 +134,6 @@ class MainFragment : androidx.fragment.app.Fragment() {
                         }, {
                             mProgressDialog.dismiss()
                         }).addTo(disposable)
-
         }
     }
 

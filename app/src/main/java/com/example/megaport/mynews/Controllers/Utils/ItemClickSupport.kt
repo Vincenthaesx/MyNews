@@ -64,5 +64,4 @@ class ItemClickSupport private constructor(private val mRecyclerView: androidx.r
 
     }
 
-
 }

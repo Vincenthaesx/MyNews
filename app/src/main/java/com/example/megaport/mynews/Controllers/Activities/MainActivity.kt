@@ -88,8 +88,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val id = item.itemId
 
         when (id) {
-            R.id.activity_main_drawer_top_stories -> 0
-            R.id.activity_main_drawer_most_popular -> 1
+            R.id.activity_main_drawer_top_stories -> viewpager.currentItem = 0
+            R.id.activity_main_drawer_most_popular -> viewpager.currentItem = 1
             R.id.activity_main_drawer_notification -> {
                 val intentNotification = Intent(this, NotificationsActivity::class.java)
                 startActivity(intentNotification)

@@ -19,8 +19,8 @@ object NotificationHelper {
         //get calendar instance to be able to select what time notification should be scheduled
         val calendar = Calendar.getInstance()
         calendar.timeInMillis = System.currentTimeMillis()
-        calendar.set(Calendar.HOUR_OF_DAY, 14)
-        calendar.set(Calendar.MINUTE, 29)
+        calendar.set(Calendar.HOUR_OF_DAY, 16)
+        calendar.set(Calendar.MINUTE, 30)
         calendar.set(Calendar.SECOND, 59)
 
         //Setting intent to class where Alarm broadcast message will be handled

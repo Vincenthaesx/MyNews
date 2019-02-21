@@ -52,10 +52,6 @@ class NotificationsActivity : AppCompatActivity() {
         this.configureSwitchChangeListener()
     }
 
-    override fun onPause() {
-        super.onPause()
-    }
-
     override fun onDestroy() {
         saveNotificationsPreferences(search_query_term_input.text.toString(), selectedCheckboxes, activity_notifications_switch.isChecked)
         if (activity_notifications_switch.isChecked) {

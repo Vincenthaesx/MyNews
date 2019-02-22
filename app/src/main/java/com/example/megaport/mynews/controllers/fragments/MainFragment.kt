@@ -99,14 +99,14 @@ class MainFragment : androidx.fragment.app.Fragment() {
         mProgressDialog.setMessage("Loading...")
         mProgressDialog.show()
         when (position) {
-            0 -> MyNewsStreams.streamFetchTopStories("home")
+            0 -> MyNewsStreams.streamFetchTopStories(HOME)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe({
                         updateUI(it.articles ?: emptyList())
                     }, {
                         it.printStackTrace()
-                        Log.e("TAG", "error request")
+                        Log.e("TAG", ERROR)
                     }, {
                         mProgressDialog.dismiss()
                     }).addTo(disposable)
@@ -118,19 +118,19 @@ class MainFragment : androidx.fragment.app.Fragment() {
                         updateUI(it.articles ?: emptyList())
                     }, {
                         it.printStackTrace()
-                        Log.e("TAG", "error request")
+                        Log.e("TAG", ERROR)
                     }, {
                         mProgressDialog.dismiss()
                     }).addTo(disposable)
 
-            2 -> MyNewsStreams.streamFetchTopStories("politics")
+            2 -> MyNewsStreams.streamFetchTopStories(POLITICS)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe({
                             updateUI(it.articles ?: emptyList())
                         }, {
                             it.printStackTrace()
-                            Log.e("TAG", "error request")
+                            Log.e("TAG", ERROR)
                         }, {
                             mProgressDialog.dismiss()
                         }).addTo(disposable)
@@ -157,6 +157,9 @@ class MainFragment : androidx.fragment.app.Fragment() {
     companion object {
 
         private const val POSITION = "position"
+        private const val HOME = "home"
+        private const val POLITICS = "politics"
+        private const val ERROR = "error request"
 
         fun newInstance(position: Int): MainFragment {
             val fragment = MainFragment()

@@ -61,9 +61,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intentAbout)
             }
             else -> {
+                throw IllegalArgumentException("Invalide item")
             }
         }
-
         return true
     }
 
@@ -83,13 +83,40 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     // -------------------
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-
         // 4 - Handle Navigation Item Click
         val id = item.itemId
 
+        val intent = Intent(this, ListArticles::class.java)
+
         when (id) {
-            R.id.activity_main_drawer_top_stories -> viewpager.currentItem = 0
-            R.id.activity_main_drawer_most_popular -> viewpager.currentItem = 1
+
+            R.id.activity_main_drawer_arts -> {
+                intent.putExtra(SECTION, "arts")
+                startActivity(intent)
+            }
+            R.id.activity_main_drawer_television-> {
+                intent.putExtra(SECTION, "television")
+                startActivity(intent)
+            }
+            R.id.activity_main_drawer_automobiles-> {
+                intent.putExtra(SECTION, "automobiles")
+                startActivity(intent)
+            }
+            R.id.activity_main_drawer_food-> {
+                intent.putExtra(SECTION, "food")
+                startActivity(intent)
+            }
+            R.id.activity_main_drawer_media-> {
+                intent.putExtra(SECTION, "medias")
+                startActivity(intent)
+            }
+            R.id.activity_main_drawer_weather->{
+                intent.putExtra(SECTION, "weathers")
+                startActivity(intent)
+            }
+
+            // ---------------------------------------------
+
             R.id.activity_main_drawer_notification -> {
                 val intentNotification = Intent(this, NotificationsActivity::class.java)
                 startActivity(intentNotification)
@@ -132,6 +159,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun configureNavigationView() {
         val navigationView = findViewById<NavigationView>(R.id.activity_main_nav_view)
         navigationView.setNavigationItemSelectedListener(this)
+    }
+
+    companion object{
+        private const val SECTION = "section"
+
     }
 
 }

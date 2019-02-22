@@ -5,31 +5,47 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/activity_main_drawer_top_stories"
+            android:id="@+id/activity_main_drawer_arts"
             android:icon="@drawable/outline_top_stories_black"
-            android:title="Top Stories" />
+            android:title="@string/arts" />
         <item
-            android:id="@+id/activity_main_drawer_most_popular"
+            android:id="@+id/activity_main_drawer_television"
             android:icon="@drawable/outline_most_popular_black"
-            android:title="Most Popular" />
+            android:title="@string/television" />
+        <item
+            android:id="@+id/activity_main_drawer_automobiles"
+            android:icon="@drawable/outline_top_stories_black"
+            android:title="@string/automobiles" />
+        <item
+            android:id="@+id/activity_main_drawer_food"
+            android:icon="@drawable/outline_most_popular_black"
+            android:title="@string/food" />
+        <item
+            android:id="@+id/activity_main_drawer_media"
+            android:icon="@drawable/outline_top_stories_black"
+            android:title="@string/media" />
+        <item
+            android:id="@+id/activity_main_drawer_weather"
+            android:icon="@drawable/outline_most_popular_black"
+            android:title="@string/weather" />
     </group>
 
-    <item android:title="Configuration">
+    <item android:title="@string/configuration">
         <menu>
             <group android:checkableBehavior="single">
 
                 <item
                     android:id="@+id/activity_main_drawer_notification"
                     android:icon="@drawable/outline_notifications_black"
-                    android:title="Notifications" />
+                    android:title="@string/notifications" />
                 <item
                     android:id="@+id/activity_main_drawer_help"
                     android:icon="@drawable/outline_help_outline_black"
-                    android:title="Help" />
+                    android:title="@string/help" />
                 <item
                     android:id="@+id/activity_main_drawer_about"
                     android:icon="@drawable/outline_about_black"
-                    android:title="About" />
+                    android:title="@string/About" />
             </group>
         </menu>
     </item>

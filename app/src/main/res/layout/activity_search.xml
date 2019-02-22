@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ll_search"
     android:layout_width="match_parent"
@@ -21,7 +22,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/baseline_key_white"
             android:background="#26C4EC"
-            android:layout_margin="10dp"/>
+            android:layout_margin="10dp"
+            tools:ignore="ContentDescription" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,8 +33,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginStart="10dp"
             android:textColor="#FFFFFF" />
-
-
 
     </LinearLayout>
 
@@ -67,7 +67,8 @@
                 android:ems="10"
                 android:hint="@string/begin_date"
                 android:inputType="date"
-                android:textColorLink="@color/colorPrimary" />
+                android:textColorLink="@color/colorPrimary"
+                tools:ignore="Autofill" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,7 +86,8 @@
                 android:ems="10"
                 android:hint="@string/end_date"
                 android:inputType="date"
-                android:textColorLink="@color/colorPrimary" />
+                android:textColorLink="@color/colorPrimary"
+                tools:ignore="Autofill" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,4 +107,5 @@
         android:text="@string/search_cap"
         android:textColor="@android:color/white"
         android:textColorLink="@color/colorPrimaryDark" />
+
 </LinearLayout>

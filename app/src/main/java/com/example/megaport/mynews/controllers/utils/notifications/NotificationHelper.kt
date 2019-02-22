@@ -19,8 +19,8 @@ object NotificationHelper {
         //get calendar instance to be able to select what time notification should be scheduled
         val calendar = Calendar.getInstance()
         calendar.timeInMillis = System.currentTimeMillis()
-        calendar.set(Calendar.HOUR_OF_DAY, 16)
-        calendar.set(Calendar.MINUTE, 30)
+        calendar.set(Calendar.HOUR_OF_DAY, 17)
+        calendar.set(Calendar.MINUTE, 17)
         calendar.set(Calendar.SECOND, 59)
 
         //Setting intent to class where Alarm broadcast message will be handled
@@ -29,9 +29,9 @@ object NotificationHelper {
         alarmIntentRTC = PendingIntent.getBroadcast(context, ALARM_TYPE_RTC, intent, PendingIntent.FLAG_UPDATE_CURRENT)
 
         //getting instance of AlarmManager service
-        alarmManagerRTC = context.getSystemService(ALARM_SERVICE) as AlarmManager?
+        alarmManagerRTC = context.getSystemService(ALARM_SERVICE) as AlarmManager
 
-        alarmManagerRTC?.setRepeating(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, AlarmManager.INTERVAL_DAY, alarmIntentRTC)
+        alarmManagerRTC?.setRepeating(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, AlarmManager.INTERVAL_DAY, alarmIntentRTC);
 
     }
 

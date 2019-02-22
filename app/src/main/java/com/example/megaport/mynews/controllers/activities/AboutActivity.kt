@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageButton
+import androidx.appcompat.widget.Toolbar
 import com.example.megaport.mynews.R
 
 class AboutActivity : AppCompatActivity() {
@@ -22,4 +23,5 @@ class AboutActivity : AppCompatActivity() {
         Intent (this, MainActivity::class.java)
         startActivity((intent))
     }
+
 }

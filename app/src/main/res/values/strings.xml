@@ -74,7 +74,6 @@
     <string name="customer_service">customer service</string>
     <string name="haisvincentapb_hotmail_com">haisvincentapb@hotmail.com</string>
     <string name="_06_19_41_01_92">06 19 41 01 92</string>
-    <string name="about">About</string>
     <string name="mynews">MyNews</string>
     <string name="for_android">for Android</string>
     <string name="version">Version</string>
@@ -82,5 +81,15 @@
     <string name="created_by_vincent_hais">Created by Vincent Hais</string>
     <string name="mynews_for_android">MyNews for Android</string>
     <string name="is_built_from_open_source_software_androidstudio">is built from open source software: AndroidStudio</string>
+    <string name="LoadingProgress">Loading...</string>
+    <string name="errorRequest">error request</string>
+    <string name="television">Television</string>
+    <string name="automobiles">Automobiles</string>
+    <string name="food">Food</string>
+    <string name="media">Media</string>
+    <string name="weather">Weather</string>
+    <string name="configuration">Configuration</string>
+    <string name="notifications">Notifications</string>
+    <string name="business">Business</string>
 
 </resources>

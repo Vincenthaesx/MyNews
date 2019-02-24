@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     // -------------------
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // 4 - Handle Navigation Item Click
+
         val id = item.itemId
 
         val intent = Intent(this, ArticleListActivity::class.java)

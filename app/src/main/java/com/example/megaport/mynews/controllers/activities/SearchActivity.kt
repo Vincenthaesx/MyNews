@@ -109,7 +109,7 @@ class SearchActivity : AppCompatActivity() {
         }
 
         // Will update the concerned EditText with the date value chosen by the user
-        dateListener = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+        dateListener = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
 
             var monthS = Integer.toString(month + 1)
             var dayS = Integer.toString(dayOfMonth)

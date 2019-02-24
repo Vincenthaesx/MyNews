@@ -70,7 +70,6 @@ class AlarmReceiver : BroadcastReceiver() {
 
     private fun sendNotifications() {
 
-
         //Build notification
         val repeatedNotification = buildLocalNotification(mContext).build()
 

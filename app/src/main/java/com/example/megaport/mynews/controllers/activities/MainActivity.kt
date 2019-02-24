@@ -22,12 +22,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        this.configureToolBar()
+        configureToolBar()
 
-        this.configureDrawerLayout()
+        configureDrawerLayout()
 
-        this.configureNavigationView()
-
+        configureNavigationView()
 
         // Get the ViewPager and set it's PagerAdapter so that it can display items
         viewpager.adapter = FragmentPagerAdapter(supportFragmentManager)
@@ -86,7 +85,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // 4 - Handle Navigation Item Click
         val id = item.itemId
 
-        val intent = Intent(this, ListArticles::class.java)
+        val intent = Intent(this, ArticleListActivity::class.java)
 
         when (id) {
 
@@ -94,8 +93,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 intent.putExtra(SECTION, "arts")
                 startActivity(intent)
             }
-            R.id.activity_main_drawer_television-> {
-                intent.putExtra(SECTION, "television")
+            R.id.activity_main_drawer_technology-> {
+                intent.putExtra(SECTION, "technology")
                 startActivity(intent)
             }
             R.id.activity_main_drawer_automobiles-> {
@@ -106,12 +105,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 intent.putExtra(SECTION, "food")
                 startActivity(intent)
             }
-            R.id.activity_main_drawer_media-> {
-                intent.putExtra(SECTION, "medias")
+            R.id.activity_main_drawer_movies-> {
+                intent.putExtra(SECTION, "movies")
                 startActivity(intent)
             }
-            R.id.activity_main_drawer_weather->{
-                intent.putExtra(SECTION, "weathers")
+            R.id.activity_main_drawer_sports->{
+                intent.putExtra(SECTION, "sports")
+                startActivity(intent)
+            }
+            R.id.activity_main_drawer_science-> {
+                intent.putExtra(SECTION, "science")
+                startActivity(intent)
+            }
+            R.id.activity_main_drawer_books-> {
+                intent.putExtra(SECTION, "books")
+                startActivity(intent)
+            }
+            R.id.activity_main_drawer_world-> {
+                intent.putExtra(SECTION, "world")
+                startActivity(intent)
+            }
+            R.id.activity_main_drawer_magazine->{
+                intent.putExtra(SECTION, "magazine")
                 startActivity(intent)
             }
 

@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.megaport.mynews.R
 import kotlinx.android.synthetic.main.activity_search.*
 import kotlinx.android.synthetic.main.search_checkboxes.*
+import kotlinx.android.synthetic.main.search_query_term.*
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.ArrayList
@@ -28,10 +29,10 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        image_button_search_return.setOnClickListener { view -> startActivity() }
+        image_button_search_return.setOnClickListener { finish() }
 
         // Setting action when the startDate EditText is focused
-        search_begin_date.setOnFocusChangeListener { v, hasFocus ->
+        search_begin_date.setOnFocusChangeListener {_, hasFocus ->
             if (hasFocus) {
                 // Setting up a new Calendar object in order to retrieve the date of the day
                 val cal = Calendar.getInstance()
@@ -54,7 +55,7 @@ class SearchActivity : AppCompatActivity() {
         }
 
         // Same as setOnFocusChangeListener but this time when the EditText has already been modified
-        search_begin_date.setOnClickListener { v ->
+        search_begin_date.setOnClickListener {
             val cal = Calendar.getInstance()
             val year = cal.get(Calendar.YEAR)
             val month = cal.get(Calendar.MONTH)
@@ -90,7 +91,7 @@ class SearchActivity : AppCompatActivity() {
             }
         }
 
-        search_end_date.setOnClickListener { v ->
+        search_end_date.setOnClickListener {
             val cal = Calendar.getInstance()
             val year = cal.get(Calendar.YEAR)
             val month = cal.get(Calendar.MONTH)
@@ -121,7 +122,7 @@ class SearchActivity : AppCompatActivity() {
             search_begin_date.setText("$dayS/$monthS/$year")
         }
 
-        dateListener2 = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+        dateListener2 = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
             var monthS = Integer.toString(month + 1)
             var dayS = Integer.toString(dayOfMonth)
             if (month < 10) {
@@ -173,7 +174,7 @@ class SearchActivity : AppCompatActivity() {
 
             if (count == 0) {
                 Toast.makeText(this, getString(R.string.specifyAtLeastOneCategory), Toast.LENGTH_LONG).show()
-            } else if ((query_include.text).toString().isEmpty() || query_include.text?.toString()?.trim { it <= ' ' }?.length == 0) {
+            } else if ((search_query_term_input.text).toString().isEmpty() || search_query_term_input.text?.toString()?.trim { it <= ' ' }?.length == 0) {
                 Toast.makeText(this, getString(R.string.enterAtLeastOneTerm), Toast.LENGTH_LONG).show()
             } else {
                 try {
@@ -191,7 +192,7 @@ class SearchActivity : AppCompatActivity() {
                 }
 
                 val intent = Intent(view.context, SearchResultActivity::class.java)
-                intent.putExtra("SearchQuery", query_include.text?.toString())
+                intent.putExtra("SearchQuery", search_query_term_input.text?.toString())
                 intent.putExtra("start_date", sDate)
                 intent.putExtra("end_date", eDate)
                 intent.putExtra("section", section)
@@ -202,8 +203,4 @@ class SearchActivity : AppCompatActivity() {
 
     }
 
-    private fun startActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
 }

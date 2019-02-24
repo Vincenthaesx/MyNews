@@ -46,7 +46,7 @@ class NotificationsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notifications)
 
-        image_button_notifications_return.setOnClickListener { view -> startActivity() }
+        image_button_notifications_return.setOnClickListener { finish() }
 
         this.retrievePreferences()
         this.configureSwitchChangeListener()
@@ -142,11 +142,6 @@ class NotificationsActivity : AppCompatActivity() {
         } else {
             NotificationHelper.cancelAlarmRTC()
         }
-    }
-
-    private fun startActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
     }
 
     companion object {

@@ -29,7 +29,6 @@
     <string name="arts">Arts</string>
     <string name="politics">Politics</string>
     <string name="business">Business</string>
-    <string name="sports">Sports</string>
     <string name="entrepreneurs">Entrepreneurs</string>
     <string name="travel">Travel</string>
 
@@ -90,6 +89,12 @@
     <string name="weather">Weather</string>
     <string name="configuration">Configuration</string>
     <string name="notifications">Notifications</string>
-    <string name="business">Business</string>
+    <string name="technology">Technology</string>
+    <string name="movies">Movies</string>
+    <string name="sciences">Sciences</string>
+    <string name="books">Books</string>
+    <string name="world">World</string>
+    <string name="magazine">Magazine</string>
+    <string name="sports">Sports</string>
 
 </resources>

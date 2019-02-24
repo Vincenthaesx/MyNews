@@ -5,9 +5,6 @@
     android:id="@+id/ll_search"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-    android:layout_marginTop="10dp"
     android:orientation="vertical"
     tools:context=".controllers.activities.SearchActivity">
 
@@ -30,26 +27,21 @@
             android:layout_height="wrap_content"
             android:text="@string/search_articles"
             android:textSize="30sp"
-            android:layout_marginTop="8dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="20dp"
             android:textColor="#FFFFFF" />
-
     </LinearLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/query_include"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/Search_query_term"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        android:textColorLink="@color/colorPrimary" />
-
+    <include
+        layout="@layout/search_query_term"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
         android:baselineAligned="false"
         android:orientation="horizontal">
 

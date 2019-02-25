@@ -3,7 +3,6 @@ package com.example.megaport.mynews.controllers.utils.notifications
 import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
-import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
@@ -108,9 +107,7 @@ class AlarmReceiver : BroadcastReceiver() {
     companion object {
 
         private const val NOTIFICATION_TITLE = "MyNews"
-        private val NOTIFICATION_CHANNEL_ID = "5000"
-        private val NOTIFICATION_CHANNEL_NAME = "MyNews"
-
-
+        private const val NOTIFICATION_CHANNEL_ID = "5000"
+        private const val NOTIFICATION_CHANNEL_NAME = "MyNews"
     }
 }

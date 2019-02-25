@@ -40,8 +40,4 @@ object NotificationHelper {
             alarmManagerRTC!!.cancel(alarmIntentRTC)
         }
     }
-
-    internal fun getNotificationManager(context: Context): NotificationManager {
-        return context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-    }
 }

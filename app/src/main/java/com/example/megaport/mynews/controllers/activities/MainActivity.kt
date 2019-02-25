@@ -85,49 +85,37 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val id = item.itemId
 
-        val intent = Intent(this, ArticleListActivity::class.java)
-
         when (id) {
 
             R.id.activity_main_drawer_arts -> {
-                intent.putExtra(SECTION, "arts")
-                startActivity(intent)
+                navigateToArticleList("arts")
             }
             R.id.activity_main_drawer_technology-> {
-                intent.putExtra(SECTION, "technology")
-                startActivity(intent)
+                navigateToArticleList("technology")
             }
             R.id.activity_main_drawer_automobiles-> {
-                intent.putExtra(SECTION, "automobiles")
-                startActivity(intent)
+                navigateToArticleList("automobiles")
             }
             R.id.activity_main_drawer_food-> {
-                intent.putExtra(SECTION, "food")
-                startActivity(intent)
+                navigateToArticleList("food")
             }
             R.id.activity_main_drawer_movies-> {
-                intent.putExtra(SECTION, "movies")
-                startActivity(intent)
+                navigateToArticleList("movies")
             }
             R.id.activity_main_drawer_sports->{
-                intent.putExtra(SECTION, "sports")
-                startActivity(intent)
+                navigateToArticleList("sports")
             }
             R.id.activity_main_drawer_science-> {
-                intent.putExtra(SECTION, "science")
-                startActivity(intent)
+                navigateToArticleList("science")
             }
             R.id.activity_main_drawer_books-> {
-                intent.putExtra(SECTION, "books")
-                startActivity(intent)
+                navigateToArticleList("books")
             }
             R.id.activity_main_drawer_world-> {
-                intent.putExtra(SECTION, "world")
-                startActivity(intent)
+                navigateToArticleList("world")
             }
             R.id.activity_main_drawer_magazine->{
-                intent.putExtra(SECTION, "magazine")
-                startActivity(intent)
+                navigateToArticleList("magazine")
             }
 
             // ---------------------------------------------
@@ -151,6 +139,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         this.drawerLayout!!.closeDrawer(GravityCompat.START)
 
         return true
+    }
+
+    private fun navigateToArticleList(section:String){
+        val intent = Intent(this, ArticleListActivity::class.java)
+        intent.putExtra(SECTION,section)
+        startActivity(intent)
     }
 
     // ---------------------

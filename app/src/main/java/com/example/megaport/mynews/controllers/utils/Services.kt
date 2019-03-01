@@ -1,4 +1,4 @@
-package com.example.megaport.mynews
+package com.example.megaport.mynews.controllers.utils
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

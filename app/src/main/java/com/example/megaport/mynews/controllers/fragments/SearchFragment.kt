@@ -16,7 +16,7 @@ import com.example.megaport.mynews.models.Article
 import com.example.megaport.mynews.models.Result
 import com.example.megaport.mynews.R
 import com.example.megaport.mynews.views.SearchAdapter
-import com.example.megaport.mynews.safeCast
+import com.example.megaport.mynews.controllers.utils.safeCast
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.rxkotlin.addTo

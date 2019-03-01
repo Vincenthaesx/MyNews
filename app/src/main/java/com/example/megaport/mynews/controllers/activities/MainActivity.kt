@@ -12,6 +12,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.example.megaport.mynews.controllers.fragments.FragmentPagerAdapter
 import com.example.megaport.mynews.R
+import com.example.megaport.mynews.controllers.utils.openActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -48,16 +49,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.activity_main_toolbar_search -> {
-                val intentSearch = Intent(this, SearchActivity::class.java)
-                startActivity(intentSearch)
+                openActivity<SearchActivity>()
             }
             R.id.activity_main_toolbar_help -> {
-                val intentHelp = Intent(this, HelpActivity::class.java)
-                startActivity(intentHelp)
+                openActivity<HelpActivity>()
             }
             R.id.activity_main_toolbar_about -> {
-                val intentAbout = Intent(this, AboutActivity::class.java)
-                startActivity(intentAbout)
+                openActivity<AboutActivity>()
             }
             else -> {
                 throw IllegalArgumentException("Invalide item")
@@ -121,16 +119,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             // ---------------------------------------------
 
             R.id.activity_main_drawer_notification -> {
-                val intentNotification = Intent(this, NotificationsActivity::class.java)
-                startActivity(intentNotification)
+                openActivity<NotificationsActivity>()
             }
             R.id.activity_main_drawer_help -> {
-                val intentHelp = Intent(this, HelpActivity::class.java)
-                startActivity(intentHelp)
+                openActivity<HelpActivity>()
             }
             R.id.activity_main_drawer_about -> {
-                val intentAbout = Intent(this, AboutActivity::class.java)
-                startActivity(intentAbout)
+                openActivity<AboutActivity>()
             }
             else -> {
             }
@@ -160,7 +155,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun configureDrawerLayout() {
         this.drawerLayout = findViewById(R.id.activity_main_drawer_layout)
         val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
-        drawerLayout!!.addDrawerListener(toggle)
+        drawerLayout?.addDrawerListener(toggle)
         toggle.syncState()
     }
 

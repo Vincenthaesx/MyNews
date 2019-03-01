@@ -3,7 +3,6 @@ package com.example.megaport.mynews.controllers.utils
 import com.example.megaport.mynews.models.Articles
 import com.example.megaport.mynews.models.Result
 import com.example.megaport.mynews.models.notifications.MyNewsResultAPI
-import com.example.megaport.mynews.okHttp
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
 import retrofit2.Retrofit

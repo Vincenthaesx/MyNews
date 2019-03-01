@@ -14,7 +14,7 @@ import com.example.megaport.mynews.controllers.utils.MyNewsStreams
 import com.example.megaport.mynews.models.Article
 import com.example.megaport.mynews.R
 import com.example.megaport.mynews.views.FragmentAdapter
-import com.example.megaport.mynews.safeCast
+import com.example.megaport.mynews.controllers.utils.safeCast
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.addTo
@@ -121,6 +121,7 @@ class MainFragment : androidx.fragment.app.Fragment() {
                         Log.e("TAG", ERROR)
                     }, {
                         mProgressDialog.dismiss()
+                        fragment_main_swipe_container.isRefreshing = false
                     }).addTo(disposable)
 
             2 -> MyNewsStreams.streamFetchTopStories(POLITICS)
@@ -133,6 +134,7 @@ class MainFragment : androidx.fragment.app.Fragment() {
                             Log.e("TAG", ERROR)
                         }, {
                             mProgressDialog.dismiss()
+                            fragment_main_swipe_container.isRefreshing = false
                         }).addTo(disposable)
         }
     }

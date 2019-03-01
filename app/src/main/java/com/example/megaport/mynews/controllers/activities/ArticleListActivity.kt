@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.megaport.mynews.controllers.utils.MyNewsStreams
 import com.example.megaport.mynews.models.Article
-import com.example.megaport.mynews.safeCast
+import com.example.megaport.mynews.controllers.utils.safeCast
 import com.example.megaport.mynews.views.FragmentAdapter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
@@ -69,6 +69,7 @@ class ArticleListActivity : AppCompatActivity() {
         mProgressDialog.isIndeterminate = true
         mProgressDialog.setMessage("Loading...")
         mProgressDialog.show()
+        activity_list_swipe_container.isRefreshing = true
 
         MyNewsStreams.streamFetchTopStories(section)
                 .subscribeOn(Schedulers.io())

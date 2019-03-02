@@ -12,5 +12,5 @@ inline fun <reified T : Any> Any.safeCast(action : (T) -> Unit) {
 
 inline fun <reified Activity : AppCompatActivity> Context.openActivity(
         intent: Intent = Intent(this, Activity::class.java)) {
-    this.startActivity(intent)
+        this.startActivity(intent)
 }

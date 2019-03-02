@@ -4,7 +4,7 @@ import androidx.test.runner.AndroidJUnit4
 
 import com.example.megaport.mynews.models.Articles
 import com.example.megaport.mynews.models.Result
-import com.example.megaport.mynews.Utils.MyNewsServiceTest
+import com.example.megaport.mynews.utils.MyNewsServiceTest
 import io.reactivex.Observable
 import io.reactivex.observers.TestObserver
 import org.junit.Test

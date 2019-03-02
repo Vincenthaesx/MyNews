@@ -14,15 +14,15 @@ internal object MyNewsStreamsTest {
         return nyTimesServiceTest.getTopStoriesArticles(key)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .timeout(10000, TimeUnit.SECONDS)
+                .timeout(100, TimeUnit.SECONDS)
     }
 
     fun streamFetchMostPopular(): Observable<Articles> {
         val nyTimesServiceTest = MyNewsServiceTest.retrofit.create(MyNewsServiceTest::class.java)
-        return nyTimesServiceTest.mostPopular
+        return nyTimesServiceTest.mostPopular()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .timeout(10000, TimeUnit.SECONDS)
+                .timeout(100, TimeUnit.SECONDS)
     }
 
     fun streamSearch(query: String, start_date: String, end_date: String, section: String): Observable<Result> {
@@ -30,6 +30,6 @@ internal object MyNewsStreamsTest {
         return nyTimesServiceTest.getSearch(query, start_date, end_date, section)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .timeout(10000, TimeUnit.SECONDS)
+                .timeout(100, TimeUnit.SECONDS)
     }
 }

@@ -19,7 +19,7 @@ class MainTest {
 
     @Test
     fun testGetMostPopularArticles() {
-        baseForTestRequestNews(mNewYorkTimeService.mostPopular)
+        baseForTestRequestNews(mNewYorkTimeService.mostPopular())
     }
 
     @Test
